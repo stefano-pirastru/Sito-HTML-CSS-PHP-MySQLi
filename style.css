@@ -1,0 +1,676 @@
+/* Reset dei margini e padding per tutti gli elementi */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /* Assicura che padding e bordi non influenzino la larghezza dell'elemento */
+}
+/* Per evitare la barra orizzontale */
+body, html {
+  overflow-x: hidden; /* Nascondi eventuale overflow orizzontale */
+}
+/* Sfondo nero su tutta la pagina */
+body {
+  background-color: black;
+  color: white;  /* Imposta tutto il testo della pagina in bianco di default */
+  margin: 0;  /* Elimina i margini predefiniti del body */
+  padding: 0;
+}
+/* Impostazioni per l'header */
+header {
+  width: 100%;  /* Occupare tutta la larghezza della riga */
+  background-color: black;  /* Sfondo nero */
+  display: flex;  /* Usare flexbox per allineare il contenuto */
+  align-items: center;  /* Centra verticalmente l'H1 e il logo */
+  justify-content: center;  /* Centra l'H1 orizzontalmente */
+  padding: 10px 20px;  /* Aggiungi un po' di spazio interno */
+}
+
+/* Impostazioni per l'H1 */
+h1 {
+  color: #FF6347;  /* Colore del testo (rosso/arancione, ma puoi cambiarlo) */
+  font-size: 45px;  /* Imposta la dimensione del font */
+  display: flex;  /* Usa flexbox per posizionare l'immagine e il testo */
+  align-items: center;  /* Allinea verticalmente l'immagine e il testo */
+  margin: 0;  /* Rimuovi margini di default */
+}
+
+/* Impostazioni per l'immagine del logo */
+#logo {
+  width: 150px;  /* Ridimensiona l'immagine */
+  height: auto;  /* Mantieni le proporzioni dell'immagine */
+  margin-right: 15px;  /* Distanza tra il logo e il testo */
+}
+/* Menu orizzontale */
+nav {
+  background-color: #FF6347;
+  text-align: center;
+  padding: 15px 0; /* Aggiungi un po' di padding per visibilità */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;  /* Usa flexbox per disporre gli elementi in orizzontale */
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 30px;  /* Spazio tra i link */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  background-color: #FF6347;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+/* Stili per la gigantografia */
+#gigantografia {
+  text-align: center;  /* Centra il contenuto */
+  margin-top: 50px;  /* Distanza dal menu di navigazione */
+  margin-bottom: 50px;  /* Un po' di spazio sotto l'immagine */
+}
+
+#gigantografia img {
+  width: 100vw;  /* Occupa tutta la larghezza della finestra */
+  height: 50vh;  /* Mantiene l'altezza fissa al 50% della viewport */
+  object-fit: cover;  /* Ritaglia l'immagine senza deformarla */
+  display: block;  /* Imposta l'immagine come blocco per evitare spazi indesiderati */
+  border-radius: 10px;  /* Opzionale: aggiunge bordi arrotondati */
+}
+
+#gigantografia .descrizione {
+  width: 80%;  /* La descrizione occupa l'80% della larghezza */
+  margin: 20px auto 0;  /* Centra il contenuto della descrizione sotto l'immagine */
+  text-align: left;  /* Allinea il testo a sinistra */
+  font-size: 1.1em;  /* Aumenta la dimensione del testo */
+  line-height: 1.6;  /* Aumenta la spaziatura tra le righe per leggibilità */
+}
+
+/* Aggiungere uno spazio tra il testo e i bordi laterali */
+#gigantografia .descrizione p {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: justify;
+}
+footer {
+  background-color: #000000;  /* Sfondo nero */
+  color: white;  /* Testo bianco */
+  text-align: center;  /* Allineamento al centro */
+  padding: 20px;  /* Padding per dare un po' di spazio */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 5px 0;  /* Distanza tra i paragrafi */
+}
+
+footer strong {
+  font-weight: bold;  /* Grassetto per le etichette */
+}
+/* Seconda pagina*/
+#programmazione {
+  background-color: black; /* Sfondo nero */
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* Maggiore spazio tra i film */
+}
+
+.film {
+  display: flex;
+  align-items: center;
+  background-color: #222;
+  padding: 20px;
+  width: 85%; /* Un po' più largo */
+  max-width: 1000px; /* Evita che diventi enorme */
+  border-radius: 12px;
+}
+
+.film img {
+  width: 180px;  /* Locandina più grande */
+  height: 260px; /* Proporzionata */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 25px;
+}
+
+.descrizione-film {
+  color: white;
+}
+
+.descrizione-film h2 {
+  margin: 0;
+  font-size: 22px; /* Testo leggermente più grande */
+  color: #ffcc00;
+}
+
+.descrizione-film p {
+  margin: 8px 0; /* Più spazio tra i paragrafi */
+  font-size: 18px; /* Testo più leggibile */
+}
+/*Terza pagina*/
+#orari {
+  padding: 40px;
+  display: flex;
+  flex-direction: column; /* Imposta la disposizione verticale */
+  justify-content: center;
+  align-items: center; /* Allinea i contenuti orizzontalmente al centro */
+}
+
+#orari h2 {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+#orari table {
+  width: 80%; /* La tabella prende buona parte della larghezza */
+  border-collapse: collapse;
+  background-color: #f4f4f4;
+  font-size: 18px;
+}
+
+#orari th, #orari td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+#orari th {
+  background-color: #333;
+  color: white;
+}
+
+.aperto {
+  background-color: #4CAF50;  /* Verde per giorni aperti */
+  color: white;
+}
+
+.chiuso {
+  background-color: #f44336;  /* Rosso per giorni chiusi */
+  color: white;
+}
+/*Quarta pagina*/
+#servizi {
+  background-color: #000;  /* Sfondo nero */
+  color: white;  /* Colore del testo bianco per contrasto */
+  padding: 40px 0;
+}
+#servizi h4{
+  text-align: center;
+}
+#servizi h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+
+#avviso-servizi {
+  text-align: center;
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+#avviso-servizi a {
+  color: white;
+  text-decoration: underline;
+  font-weight: bold;
+  display: inline-block; /* Mantiene il link allineato */
+}
+
+.servizio {
+  display: flex;
+  align-items: center;
+  background-color: #333;  /* Sfondo grigio scuro per ogni servizio */
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;  /* Aggiustato per dare spazio sui lati */
+  border-radius: 10px;
+}
+
+.servizio img {
+  width: 120px; /* Mantiene la stessa larghezza */
+  height: 120px; /* Imposta un'altezza fissa per uniformare */
+  object-fit: cover; /* Evita deformazioni mantenendo le proporzioni */
+  margin-right: 20px;
+}
+
+.descrizione-servizio {
+  flex: 1;
+}
+
+.descrizione-servizio h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.descrizione-servizio p {
+  font-size: 1.1em;
+  margin: 5px 0;
+}
+/*Quinta pagina*/
+#login-form {
+  max-width: 400px;
+  margin: 60px auto 60px auto; /* Aggiunto un piccolo margine sopra per distaccarlo dal nav */
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+}
+
+#login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#login-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+}
+
+#login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#login-form button:hover {
+  background-color: #4cae4c;
+}
+
+#login-form p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.2em; /* Aumentato leggermente la dimensione del testo */
+}
+
+#login-form a {
+  color: #5cb85c;  /* Verde per la parola "Registrati" */
+  text-decoration: none;
+  font-weight: bold;  /* Aggiunto il grassetto */
+}
+
+#login-form p a {
+  font-size: 1.4em; /* Dimensione del testo "Registrati" maggiore */
+}
+
+#login-form p a:hover {
+  text-decoration: underline;
+}
+
+#login-form p {
+  text-align: center; /* Centrato il paragrafo con il link */
+}
+/* CSS per il messaggio di errore --> Quando un utente prova ad accedere tramite URL ad una pagina amministratore (che non vede nel NAV). La pagina di Login va a ripescare dalle pagine amministrative il messaggio d'errore*/
+.error-message {
+    color: red;
+    background-color: #f8d7da;
+    padding: 10px;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/*Sesta pagina*/
+.RegistratiForm {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+}
+
+.RegistratiForm h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.RegistratiForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.RegistratiForm form label {
+  margin-bottom: 8px;
+  font-size: 1.2em;
+}
+
+.RegistratiForm form input {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+  font-size: 1em;
+}
+
+.RegistratiForm form button {
+  padding: 12px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.RegistratiForm form button:hover {
+  background-color: #4cae4c;
+}
+
+.RegistratiForm p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.RegistratiForm p a {
+  color: #5cb85c;
+  text-decoration: none;
+}
+
+.RegistratiForm p a:hover {
+  text-decoration: underline;
+}
+/* Profilo Utente */
+#profilo-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#profilo-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.profilo-section {
+    margin-bottom: 30px;
+}
+
+.profilo-section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #555;
+}
+
+.profilo-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.profilo-section strong {
+    color: #333;
+}
+
+/* Form di Cambia Password */
+#profilo-form {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#profilo-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+#profilo-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#profilo-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#profilo-form button:hover {
+    background-color: #4cae4c;
+}
+
+#profilo-form .message {
+    color: #d9534f;
+    font-size: 14px;
+    text-align: center;
+}
+/*Pagina di ricerca*/
+#ricerca {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#ricerca h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#ricerca h3 {
+  color: #333; /* Colore scuro per il titolo */
+}
+
+#ricerca form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#ricerca form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+#ricerca form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+#ricerca form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#ricerca form button:hover {
+  background-color: #4cae4c;
+}
+
+/* Stile per i risultati della ricerca */
+#ricerca ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#ricerca ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333; /* Aggiungi un colore scuro per il testo */
+}
+
+#ricerca ul li a {
+  text-decoration: none;
+  color: #007bff; /* Colore blu per il link */
+}
+
+#ricerca ul li a:hover {
+  text-decoration: underline;
+  color: #0056b3; /* Colore blu più scuro al passaggio del mouse */
+}
+
+#ricerca p {
+  font-size: 16px;
+  color: #333; /* Cambiato a un colore scuro per garantire che sia leggibile */
+  text-align: center;
+}
+
+/* Pagina Dettagli */
+#dettagli {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+#dettagli h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dettagli-servizi {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #000; /* Colore del testo nero per tutto il blocco */
+}
+
+.dettagli-servizi ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+}
+
+.dettagli-servizi ul li {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: inherit; /* Eredita il nero da .dettagli-servizi */
+}
+
+.dettagli-servizi ul li strong {
+    font-weight: bold;
+    color: inherit; /*  il grassetto resta nero */
+}
+
+/* Messaggio "nessun servizio" */
+#dettagli p {
+    text-align: center;
+    font-size: 18px;
+    color: #888;
+}
+
+/*Pagina Admin dashboard*/
+.admin-sezione-titolo {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Paragrafo descrittivo */
+#admin-descrizione {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Link comuni per l'amministrazione */
+.admin-link {
+    font-size: 1.1em;
+    color: #007BFF;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.admin-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Separatore tra le sezioni */
+#admin-separatore {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* Titolo di benvenuto */
+#admin-bentornato {
+    font-size: 2em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Gestione utenti */
+#admin-elimina-utente {
+    font-size: 1.1em;
+    color: #FF6347;
+    text-decoration: none;
+}
+
+#admin-elimina-utente:hover {
+    color: #cc4e2e;
+    text-decoration: underline;
+}
